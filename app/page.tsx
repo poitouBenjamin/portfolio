@@ -1,4 +1,10 @@
 import HeroSection from "@/components/HeroSection";
+import AboutMeSection from "@/components/AboutMeSection";
 export default function Home() {
-  return <HeroSection />;
+  return (
+    <>
+      <HeroSection />
+      <AboutMeSection />
+    </>
+  );
 }
