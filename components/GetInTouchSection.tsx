@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 
 export default function GetInTouchSection() {
   return (
-    <section className="h-screen flex flex-col justify-center items-center gap-10">
+    <section className="flex flex-col justify-center items-center gap-10 min-h-[90dvh]">
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center pb-4">
         Get In Touch
       </h2>
@@ -12,7 +12,7 @@ export default function GetInTouchSection() {
         feel free to reach out!
       </p>
 
-      <button className="flex justify-around items-center w-full max-w-60 h-10 bg-blue-950 rounded-lg">
+      <button className="flex justify-around items-center w-full max-w-65 h-10 bg-blue-950 rounded-lg px-2">
         <Mail size={20} />
         <span>poitoubenjamin@gmail.com</span>
       </button>

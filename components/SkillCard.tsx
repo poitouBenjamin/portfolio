@@ -7,7 +7,7 @@ type SkillCardProps = {
 
 export default function SkillCard({ logoUrl, skillName }: SkillCardProps) {
   return (
-    <div className="flex flex-col justify-center items-center w-50 h-30 rounded-md gap-3 border bg-black">
+    <div className="flex flex-col justify-center items-center w-full min-h-35 rounded-md gap-3 border bg-black">
       <Image
         src={logoUrl}
         alt={`logo for ${skillName} skill`}
