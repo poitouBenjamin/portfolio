@@ -1,4 +1,15 @@
 import ProjectCard from "./ProjectCard";
+import { ExternalLink } from "lucide-react";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const projectItems = [
   {
@@ -6,6 +17,10 @@ const projectItems = [
     title: "E-Commerce Dashboard",
     description:
       "A responsive admin dashboard for managing products, orders, and analytics with real-time data visualization.",
+    fullDesciption:
+      "A comprehensive e-commerce administration platform built to streamline online store management. Features include real-time sales analytics, inventory tracking, order processing workflows, and customer behavior insights. The dashboard provides actionable metrics through interactive charts and supports bulk operations for efficient product management.",
+    myRole:
+      "Lead Frontend Developer - Designed and implemented the entire frontend architecture, created reusable component library, integrated REST APIs, and optimized performance for handling large datasets.",
     skills: ["React", "Tailwind", "Chart.js"],
   },
   {
@@ -40,12 +55,67 @@ export default function ProjectsSection() {
           {projectItems.map((projectItem, idx) => {
             return (
               <li key={idx}>
-                <ProjectCard
-                  id={projectItem.id}
-                  title={projectItem.title}
-                  description={projectItem.description}
-                  skills={projectItem.skills}
-                />
+                <Dialog>
+                  <DialogTrigger>
+                    <ProjectCard
+                      id={projectItem.id}
+                      title={projectItem.title}
+                      description={projectItem.description}
+                      skills={projectItem.skills}
+                    />
+                  </DialogTrigger>
+                  <DialogContent className=" min-w-xl l m-0 p-0">
+                    <DialogHeader className="w-full p-0 m-0">
+                      <div className="flex justify-center items-center h-60 border bg-blue-900 rounded-t-lg">
+                        {projectItem.id}
+                      </div>
+                      <DialogTitle />
+                    </DialogHeader>
+
+                    <div className="flex flex-col gap-8 max-w-[50dvw] w-full px-5 pb-2">
+                      <h2 className="font-bold text-2xl">
+                        {projectItem.title}
+                      </h2>
+                      <div className="flex flex-col gap-2">
+                        <h3 className="text-muted-foreground font-bold">
+                          ABOUT THIS PROJECT
+                        </h3>
+                        <p className="text-card-foreground">
+                          {projectItem.fullDesciption}
+                        </p>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <h3 className="text-muted-foreground font-bold">
+                          MY ROLE
+                        </h3>
+                        <p className="text-card-foreground">
+                          {projectItem.myRole}
+                        </p>
+                      </div>
+                      <div className="flex flex-col gap-2 pb-3">
+                        <h3 className="text-muted-foreground font-bold">
+                          TECHNOLOGIES USED
+                        </h3>
+                        <ul className="flex justify-start imtes-center gap-3">
+                          {projectItem.skills.map((skill, idx) => {
+                            return (
+                              <li
+                                key={idx}
+                                className="border rounded-xl bg-blue-950 w-auto px-2 "
+                              >
+                                {skill}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                      <div className="flex justify-center gap-5 items-center w-full border h-10 rounded-md cursor-pointer hover:scale-105 bg-primary">
+                        <button>Visit Live Site</button>
+                        <ExternalLink size={17} />
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </li>
             );
           })}
