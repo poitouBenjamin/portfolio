@@ -57,9 +57,9 @@ export default function SkillsCarousel() {
   return (
     <Carousel className="w-full" opts={{ loop: true }}>
       <CarouselContent>
-        <CarouselItem className="flex flex-col w-full gap-4">
+        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
           <h4 className="text-center w-full">Languages</h4>
-          <ul className="grid grid-cols-3 gap-5">
+          <ul className="grid grid-cols-4 gap-5">
             {skillLanguages.map((skillLanguage, idx) => {
               return (
                 <li key={idx}>
@@ -72,9 +72,9 @@ export default function SkillsCarousel() {
             })}
           </ul>
         </CarouselItem>
-        <CarouselItem className="flex flex-col w-full gap-4 pl-5">
+        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
           <h4 className="text-center w-full">Frameworks & Libraries</h4>
-          <ul className="grid grid-cols-3 gap-5">
+          <ul className="grid grid-cols-4 gap-5">
             {skillFrameworks.map((skillFramework, idx) => {
               return (
                 <li key={idx}>
@@ -87,9 +87,9 @@ export default function SkillsCarousel() {
             })}
           </ul>
         </CarouselItem>
-        <CarouselItem className="flex flex-col w-full gap-4 pl-5">
+        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
           <h4 className="text-center w-full">Database & ORM</h4>
-          <ul className="grid grid-cols-3 gap-5">
+          <ul className="grid grid-cols-4 gap-5">
             {skillDatabases.map((skillDatabases, idx) => {
               return (
                 <li key={idx}>
@@ -103,9 +103,9 @@ export default function SkillsCarousel() {
           </ul>
         </CarouselItem>
 
-        <CarouselItem className="flex flex-col w-full gap-4 pl-5">
+        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
           <h4 className="text-center w-full">Database & ORM</h4>
-          <ul className="grid grid-cols-3 gap-5">
+          <ul className="grid grid-cols-4 gap-5">
             {skillTools.map((skillTool, idx) => {
               return (
                 <li key={idx}>
@@ -118,9 +118,9 @@ export default function SkillsCarousel() {
             })}
           </ul>
         </CarouselItem>
-        <CarouselItem className="flex flex-col w-full gap-4 pl-5">
+        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
           <h4 className="text-center w-full">Database & ORM</h4>
-          <ul className="grid grid-cols-3 gap-5">
+          <ul className="grid grid-cols-4 gap-5">
             {skillAis.map((skillAi, idx) => {
               return (
                 <li key={idx}>
@@ -133,9 +133,9 @@ export default function SkillsCarousel() {
             })}
           </ul>
         </CarouselItem>
-        <CarouselItem className="flex flex-col w-full gap-4 pl-5">
+        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
           <h4 className="text-center w-full">Database & ORM</h4>
-          <ul className="grid grid-cols-3 gap-5">
+          <ul className="grid grid-cols-4 gap-5">
             {skillCMSs.map((skillCMS, idx) => {
               return (
                 <li key={idx}>

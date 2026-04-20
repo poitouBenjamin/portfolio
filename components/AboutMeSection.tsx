@@ -11,12 +11,12 @@ const skillItems = [
 
 export default function AboutMeSection() {
   return (
-    <section className="flex flex-col justify-center h-screen items-center w-full">
+    <section className="flex flex-col justify-center h-[115dvh] items-center w-full">
       <h2 className="text-3xl md:text-4xl font-bold  text-foreground w-full text-center pb-20">
         About Me
       </h2>
       <div className="flex md:flex-row flex-col justify-between items-start gap-2 w-full px-20">
-        <article className="flex flex-col justify-center items-center h-full text-xl text-foreground w-full max-w-1/2 pr-10">
+        <article className="flex flex-col justify-start items-center h-full text-xl text-foreground w-full max-w-1/2 pr-10">
           <div className="flex flex-col gap-5 w-full text-lg font-light text-muted-foreground">
             <p className="">
               Hi! I'm Benjamin, a junior frontend developer with a passion for
