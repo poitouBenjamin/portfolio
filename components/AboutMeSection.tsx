@@ -1,4 +1,5 @@
 import SkillCard from "./SkillCard";
+import SkillsCarousel from "./SkillsCarousel";
 
 const skillItems = [
   { logoUrl: "/logos/htmlLogo.png", name: "HTML" },
@@ -40,18 +41,7 @@ export default function AboutMeSection() {
         </article>
         <article className="flex flex-col w-full max-w-1/2 justify-start items-start">
           <h3 className="font-bold text-2xl pb-7">My skills</h3>
-          <ul className="grid grid-cols-3 gap-1 justify-items-start ">
-            {skillItems.map((skillItem, idx) => {
-              return (
-                <li key={idx} className="">
-                  <SkillCard
-                    logoUrl={skillItem.logoUrl}
-                    skillName={skillItem.name}
-                  />
-                </li>
-              );
-            })}
-          </ul>
+          <SkillsCarousel />
         </article>
       </div>
     </section>
