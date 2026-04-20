@@ -1,21 +1,28 @@
-import { ExternalLink } from "lucide-react";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 type ProjectCardProps = {
-  id: number;
+  cover: StaticImageData;
   title: string;
   description: string;
   skills: string[];
 };
 
 export default function ProjectCard({
-  id,
+  cover,
   title,
   description,
-  skills,
 }: ProjectCardProps) {
   return (
     <article className="flex flex-col gap-4 w-full max-w-120 border min-h-120 h-full rounded-lg cursor-pointer hover:scale-105">
-      <div className="flex justify-center items-center h-60 border bg-blue-900 rounded-t-lg">
-        {id}
+      <div className="relative h-60 w-full overflow-hidden rounded-t-lg border">
+        <Image
+          src={cover}
+          alt="AMI Paris Project Map"
+          fill
+          priority
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </div>
 
       <div className="flex flex-col  px-5 gap-10 justify-between items-start h-full">
