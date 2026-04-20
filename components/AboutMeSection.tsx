@@ -1,4 +1,3 @@
-import SkillCard from "./SkillCard";
 import SkillsCarousel from "./SkillsCarousel";
 
 const skillItems = [
