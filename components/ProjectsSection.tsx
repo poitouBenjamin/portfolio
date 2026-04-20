@@ -26,17 +26,17 @@ const projectItems = [
 
 export default function ProjectsSection() {
   return (
-    <section className="w-full flex flex-col justify-center items-center">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center pb-4">
+    <section className="w-full flex flex-col justify-center items-center h-screen gap-5">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center">
         My Projects
       </h2>
-      <div className=" flex flex-col items-center justify-center text-muted-foreground text-lg  pt-10 pb-20">
+      <div className=" flex flex-col items-center justify-center text-muted-foreground text-lg gap-9">
         <p className="text-center w-full max-w-150">
           Here are some of my recent projects that showcase my skills and
           passion for frontend development.
         </p>
 
-        <ul className="grid grid-cols-3 gap-5 pt-15">
+        <ul className="grid grid-cols-3 gap-5">
           {projectItems.map((projectItem, idx) => {
             return (
               <li key={idx}>

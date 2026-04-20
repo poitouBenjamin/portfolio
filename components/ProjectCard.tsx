@@ -13,8 +13,8 @@ export default function ProjectCard({
   skills,
 }: ProjectCardProps) {
   return (
-    <article className="flex flex-col  gap-4 h-120 w-full max-w-95 border rounded-lg">
-      <div className="flex justify-center items-center h-1/2 border bg-blue-900">
+    <article className="flex flex-col gap-4 w-full max-w-95 border rounded-lg">
+      <div className="flex justify-center items-center h-60 border bg-blue-900">
         {id}
       </div>
 
