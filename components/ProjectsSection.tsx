@@ -2,10 +2,7 @@ import ProjectCard from "./ProjectCard";
 import { ExternalLink } from "lucide-react";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -33,27 +30,13 @@ const projectItems = [
       "Clustering Algorithms",
     ],
   },
-  {
-    id: 2,
-    title: "Weather App",
-    description:
-      "A beautiful weather application featuring location-based forecasts, animated backgrounds, and hourly predictions",
-    skills: ["JavaScript", "API", "CSS"],
-  },
-  {
-    id: 3,
-    title: "Task Manager",
-    description:
-      "A feature-rich task management app with drag-and-drop functionality, categories, and progress tracking.",
-    skills: ["React", "Redux", "Firebase"],
-  },
 ];
 
 export default function ProjectsSection() {
   return (
     <section
       id="projectSection"
-      className="w-full flex flex-col justify-center items-center min-h-screen gap-5"
+      className="w-full flex flex-col justify-center items-center min-h-screen gap-5 px-5"
     >
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center">
         My Projects
@@ -65,10 +48,10 @@ export default function ProjectsSection() {
           passion for frontend development.
         </p>
 
-        <ul className="grid grid-cols-3 gap-5 justify-items-center w-full pt-10">
+        <ul className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full pt-10">
           {projectItems.map((projectItem, idx) => {
             return (
-              <li key={idx} className="min-w-full">
+              <li key={idx} className="flex justify-center items-center w-full">
                 <Dialog>
                   <DialogTrigger>
                     {projectItem.heroPicture && (
@@ -80,9 +63,9 @@ export default function ProjectsSection() {
                       />
                     )}
                   </DialogTrigger>
-                  <DialogContent className=" min-w-2xl l m-0 p-0 overflow-y-auto max-h-[90dvh]">
+                  <DialogContent className="w-[95vw] sm:max-w-2xl m-0 p-0 overflow-y-auto max-h-[90dvh] ">
                     <DialogHeader className="w-full p-2 m-0">
-                      <div className="relative h-60 w-full overflow-hidden rounded-t-lg">
+                      <div className="relative h-48 sm:h-60 w-full overflow-hidden rounded-t-lg">
                         {projectItem.heroPicture && (
                           <Image
                             src={projectItem.heroPicture}
@@ -104,11 +87,11 @@ export default function ProjectsSection() {
                       <DialogTitle />
                     </DialogHeader>
 
-                    <div className="flex flex-col gap-8 max-w-[40dvw] w-full px-5 pb-2">
-                      <h2 className="font-bold text-2xl">
+                    <div className="flex flex-col gap-8 w-full px-5 pb-2">
+                      <h2 className="font-bold text-2xl w-full">
                         {projectItem.title}
                       </h2>
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-col gap-2 w-full">
                         <h3 className="text-muted-foreground font-bold">
                           ABOUT THIS PROJECT
                         </h3>
@@ -116,7 +99,7 @@ export default function ProjectsSection() {
                           {projectItem.fullDesciption}
                         </p>
                       </div>
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-col gap-2 w-full">
                         <h3 className="text-muted-foreground font-bold">
                           MY ROLE
                         </h3>
@@ -124,21 +107,19 @@ export default function ProjectsSection() {
                           {projectItem.myRole}
                         </p>
                       </div>
-                      <div className="flex flex-col gap-2 pb-3">
+                      <div className="flex flex-col gap-2 pb-3 w-full">
                         <h3 className="text-muted-foreground font-bold">
                           TECHNOLOGIES USED
                         </h3>
-                        <ul className="flex justify-start imtes-center gap-3">
-                          {projectItem.skills.map((skill, idx) => {
-                            return (
-                              <li
-                                key={idx}
-                                className="border rounded-xl bg-blue-950 w-auto px-2 "
-                              >
-                                {skill}
-                              </li>
-                            );
-                          })}
+                        <ul className="flex flex-wrap justify-start items-center gap-3 w-full">
+                          {projectItem.skills.map((skill, idx) => (
+                            <li
+                              key={idx}
+                              className="border rounded-xl bg-blue-950 w-auto px-2 whitespace-nowrap"
+                            >
+                              {skill}
+                            </li>
+                          ))}
                         </ul>
                       </div>
                       <a

@@ -37,7 +37,7 @@ const skillItems = [
     skills: [
       { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
       { logoUrl: "/logos/jdbcLogo.svg", name: "JDBC" },
-      { logoUrl: "/logos/jpaLogo.png", name: "JPA/Hibernate" },
+      { logoUrl: "/logos/jpaLogo.png", name: "Hibernate" },
     ],
   },
   {
@@ -76,12 +76,12 @@ export default function SkillsCarousel() {
           return (
             <CarouselItem
               key={id}
-              className="flex flex-col justify-start items-start w-full gap-4"
+              className="flex flex-col justify-start items-start w-full gap-4 overflow-hidden min-w-0"
             >
               <h4 className=" w-full text-center bg-linear-to-r from-gradient-start to-gradient-end bg-clip-text  text-transparent font-bold">
                 {skillItem.blockTitle}
               </h4>
-              <ul className="grid grid-cols-5 gap-5 w-full p-2">
+              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 w-full p-2">
                 {skillItem.skills.map((skill, idx) => {
                   return (
                     <li
