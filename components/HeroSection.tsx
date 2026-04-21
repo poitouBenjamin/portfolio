@@ -1,13 +1,16 @@
-import React from "react";
+import { MoveDown, Mail } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col gap-3 h-[90dvh] justify-center items-center bg-background animate-fade-in">
-      <p className="text-primary text-sm font-medium tracking-wider animate-slide-up">
-        HELLO I'M
-      </p>
+    <section
+      id="heroSection"
+      className="relative flex flex-col gap-3 min-h-[90dvh] justify-center items-center bg-background animate-fade-in"
+    >
       <h1 className="text-5xl lg:text-8xl md:text-7xl font-bold text-forground">
-        Benjamin POITOU
+        Benjamin{" "}
+        <span className="bg-linear-to-r from-gradient-start to-gradient-end bg-clip-text text-transparent">
+          POITOU
+        </span>
       </h1>
       <p className="text-xl md:text-2xl text-muted-foreground animate-slide-up animation-delay-300 pb-10">
         Junior Frontend Developer
@@ -17,12 +20,24 @@ export default function HeroSection() {
         <p>technologies. Passionate about clean code and thoughtful design.</p>
       </div>
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm animate-slide-up animation-delay-300">
-        <button className="h-10 w-40 rounded-md border bg-black font-medium">
-          See my projects
-        </button>
-        <button className="h-10 w-40 rounded-md border bg-black font-medium">
-          Contact me
-        </button>
+        <div className="btn-gradient rounded-md border h-10 w-40  hover:scale-105">
+          <a
+            href="#projectSection"
+            className="flex justify-center cursor-pointer items-center gap-2 font-medium text-sm w-full h-full"
+          >
+            See my projects
+            <MoveDown size={16} />
+          </a>
+        </div>
+        <div className="hover-btn-gradient rounded-md border h-10 w-40  hover:scale-105 animate-slide-up animation-delay-300">
+          <a
+            href="#getInTouchSection"
+            className="flex justify-center items-center gap-2 cursor-pointer font-medium text-sm w-full h-full"
+          >
+            Contact me
+            <Mail size={16} />
+          </a>
+        </div>
       </div>
     </section>
   );

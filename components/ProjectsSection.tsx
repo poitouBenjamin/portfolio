@@ -51,17 +51,21 @@ const projectItems = [
 
 export default function ProjectsSection() {
   return (
-    <section className="w-full flex flex-col justify-center items-center h-screen gap-5">
+    <section
+      id="projectSection"
+      className="w-full flex flex-col justify-center items-center min-h-screen gap-5"
+    >
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center">
         My Projects
       </h2>
-      <div className=" flex flex-col items-center justify-center text-muted-foreground text-lg gap-9">
+      <div className="h-1 w-20 bg-linear-to-r from-gradient-start to-gradient-end rounded-full" />
+      <div className=" flex flex-col items-center justify-center text-muted-foreground text-lg gap-9 ">
         <p className="text-center w-full max-w-150">
           Here are some of my recent projects that showcase my skills and
           passion for frontend development.
         </p>
 
-        <ul className="grid grid-cols-3 gap-5 justify-items-center w-full">
+        <ul className="grid grid-cols-3 gap-5 justify-items-center w-full pt-10">
           {projectItems.map((projectItem, idx) => {
             return (
               <li key={idx} className="min-w-full">
@@ -78,7 +82,7 @@ export default function ProjectsSection() {
                   </DialogTrigger>
                   <DialogContent className=" min-w-2xl l m-0 p-0 overflow-y-auto max-h-[90dvh]">
                     <DialogHeader className="w-full p-2 m-0">
-                      <div className="relative h-60 w-full overflow-hidden rounded-t-lg border bg-blue-900">
+                      <div className="relative h-60 w-full overflow-hidden rounded-t-lg">
                         {projectItem.heroPicture && (
                           <Image
                             src={projectItem.heroPicture}
@@ -89,6 +93,13 @@ export default function ProjectsSection() {
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
                         )}
+                        <div
+                          className="absolute inset-0 bg-linear-to-b from-transparent"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to bottom, transparent, oklch(0.08 0.01 270))",
+                          }}
+                        />
                       </div>
                       <DialogTitle />
                     </DialogHeader>
