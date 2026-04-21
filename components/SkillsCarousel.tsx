@@ -7,150 +7,103 @@ import {
 } from "@/components/ui/carousel";
 import SkillCard from "./SkillCard";
 
-const skillLanguages = [
-  { logoUrl: "/logos/htmlLogo.png", name: "HTML5" },
-  { logoUrl: "/logos/cssLogo.png", name: "CSS3" },
-  { logoUrl: "/logos/jsLogo.png", name: "JavaScript ES6+" },
-  { logoUrl: "/logos/tsLogo.png", name: "Typescript" },
-  { logoUrl: "/logos/javaLogo.png", name: "Java" },
-  { logoUrl: "/logos/cLogo.png", name: "C" },
-  { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
-];
-
-const skillFrameworks = [
-  { logoUrl: "/logos/nodeLogo.png", name: "Node.js" },
-  { logoUrl: "/logos/reactLogo.svg", name: "React" },
-  { logoUrl: "/logos/nextLogo.png", name: "Next.js" },
-  { logoUrl: "/logos/springLogo.png", name: "Spring" },
-  { logoUrl: "/logos/javaLogo.png", name: "Java" },
-  { logoUrl: "/logos/tailwindLogo.png", name: "Tailwind" },
-  { logoUrl: "/logos/shadcnLogo.svg", name: "Shadcn/ui" },
-];
-
-const skillDatabases = [
-  { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
-  { logoUrl: "/logos/jdbcLogo.svg", name: "JDBC" },
-  { logoUrl: "/logos/jpaLogo.png", name: "JPA/Hibernate" },
-];
-
-const skillTools = [
-  { logoUrl: "/logos/vscodeLogo.png", name: "Vs Code" },
-  { logoUrl: "/logos/ijLogo.png", name: "IntelliJ IDEA" },
-  { logoUrl: "/logos/gitLogo.png", name: "Git" },
-  { logoUrl: "/logos/vmLogo.png", name: "VM Deployment" },
-  { logoUrl: "/logos/figmaLogo.png", name: "Figma" },
-];
-
-const skillAis = [
-  { logoUrl: "/logos/copilotLogo.svg", name: "github Copilot" },
-  { logoUrl: "/logos/cursorLogo.png", name: "Cursor" },
-  { logoUrl: "/logos/claudeLogo.svg", name: "Claude Code" },
-];
-
-const skillCMSs = [
-  { logoUrl: "/logos/umlLogo.png", name: "UML" },
-  { logoUrl: "/logos/prismicLogo.svg", name: "Prismic" },
-  { logoUrl: "/logos/sanityLogo.png", name: "Sanity" },
+const skillItems = [
+  {
+    blockTitle: "Languages",
+    skills: [
+      { logoUrl: "/logos/htmlLogo.png", name: "HTML5" },
+      { logoUrl: "/logos/cssLogo.png", name: "CSS3" },
+      { logoUrl: "/logos/jsLogo.png", name: "JavaScript ES6+" },
+      { logoUrl: "/logos/tsLogo.png", name: "Typescript" },
+      { logoUrl: "/logos/javaLogo.png", name: "Java" },
+      { logoUrl: "/logos/cLogo.png", name: "C" },
+      { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
+    ],
+  },
+  {
+    blockTitle: "Frameworks & Libraries",
+    skills: [
+      { logoUrl: "/logos/nodeLogo.png", name: "Node.js" },
+      { logoUrl: "/logos/reactLogo.svg", name: "React" },
+      { logoUrl: "/logos/nextLogo.png", name: "Next.js" },
+      { logoUrl: "/logos/springLogo.png", name: "Spring" },
+      { logoUrl: "/logos/javaLogo.png", name: "Java" },
+      { logoUrl: "/logos/tailwindLogo.png", name: "Tailwind" },
+      { logoUrl: "/logos/shadcnLogo.svg", name: "Shadcn/ui" },
+    ],
+  },
+  {
+    blockTitle: "Database & ORM",
+    skills: [
+      { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
+      { logoUrl: "/logos/jdbcLogo.svg", name: "JDBC" },
+      { logoUrl: "/logos/jpaLogo.png", name: "JPA/Hibernate" },
+    ],
+  },
+  {
+    blockTitle: "Tools & DevOps",
+    skills: [
+      { logoUrl: "/logos/vscodeLogo.png", name: "Vs Code" },
+      { logoUrl: "/logos/ijLogo.png", name: "IntelliJ IDEA" },
+      { logoUrl: "/logos/gitLogo.png", name: "Git" },
+      { logoUrl: "/logos/vmLogo.png", name: "VM Deployment" },
+      { logoUrl: "/logos/figmaLogo.png", name: "Figma" },
+    ],
+  },
+  {
+    blockTitle: "AI Assistants",
+    skills: [
+      { logoUrl: "/logos/copilotLogo.svg", name: "github Copilot" },
+      { logoUrl: "/logos/cursorLogo.png", name: "Cursor" },
+      { logoUrl: "/logos/claudeLogo.svg", name: "Claude Code" },
+    ],
+  },
+  {
+    blockTitle: "CMS & Design",
+    skills: [
+      { logoUrl: "/logos/umlLogo.png", name: "UML" },
+      { logoUrl: "/logos/prismicLogo.svg", name: "Prismic" },
+      { logoUrl: "/logos/sanityLogo.png", name: "Sanity" },
+    ],
+  },
 ];
 
 export default function SkillsCarousel() {
   return (
     <Carousel className="w-full" opts={{ loop: true }}>
       <CarouselContent>
-        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
-          <h4 className="text-center w-full">Languages</h4>
-          <ul className="grid grid-cols-4 gap-5">
-            {skillLanguages.map((skillLanguage, idx) => {
-              return (
-                <li key={idx}>
-                  <SkillCard
-                    logoUrl={skillLanguage.logoUrl}
-                    skillName={skillLanguage.name}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </CarouselItem>
-        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
-          <h4 className="text-center w-full">Frameworks & Libraries</h4>
-          <ul className="grid grid-cols-4 gap-5">
-            {skillFrameworks.map((skillFramework, idx) => {
-              return (
-                <li key={idx}>
-                  <SkillCard
-                    logoUrl={skillFramework.logoUrl}
-                    skillName={skillFramework.name}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </CarouselItem>
-        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
-          <h4 className="text-center w-full">Database & ORM</h4>
-          <ul className="grid grid-cols-4 gap-5">
-            {skillDatabases.map((skillDatabases, idx) => {
-              return (
-                <li key={idx}>
-                  <SkillCard
-                    logoUrl={skillDatabases.logoUrl}
-                    skillName={skillDatabases.name}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </CarouselItem>
-
-        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
-          <h4 className="text-center w-full">Database & ORM</h4>
-          <ul className="grid grid-cols-4 gap-5">
-            {skillTools.map((skillTool, idx) => {
-              return (
-                <li key={idx}>
-                  <SkillCard
-                    logoUrl={skillTool.logoUrl}
-                    skillName={skillTool.name}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </CarouselItem>
-        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
-          <h4 className="text-center w-full">Database & ORM</h4>
-          <ul className="grid grid-cols-4 gap-5">
-            {skillAis.map((skillAi, idx) => {
-              return (
-                <li key={idx}>
-                  <SkillCard
-                    logoUrl={skillAi.logoUrl}
-                    skillName={skillAi.name}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </CarouselItem>
-        <CarouselItem className="flex flex-col justify-center items-start w-full gap-4">
-          <h4 className="text-center w-full">Database & ORM</h4>
-          <ul className="grid grid-cols-4 gap-5">
-            {skillCMSs.map((skillCMS, idx) => {
-              return (
-                <li key={idx}>
-                  <SkillCard
-                    logoUrl={skillCMS.logoUrl}
-                    skillName={skillCMS.name}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </CarouselItem>
+        {skillItems.map((skillItem, id) => {
+          return (
+            <CarouselItem
+              key={id}
+              className="flex flex-col justify-start items-start w-full gap-4"
+            >
+              <h4 className=" w-full text-center bg-linear-to-r from-gradient-start to-gradient-end bg-clip-text  text-transparent font-bold">
+                {skillItem.blockTitle}
+              </h4>
+              <ul className="grid grid-cols-5 gap-5 w-full p-2">
+                {skillItem.skills.map((skill, idx) => {
+                  return (
+                    <li
+                      key={idx}
+                      className="transition-transform duration-500 ease-in-out hover:scale-105 hover:border hover:border-primary rounded-md w-full"
+                    >
+                      <SkillCard
+                        logoUrl={skill.logoUrl}
+                        skillName={skill.name}
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+            </CarouselItem>
+          );
+        })}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <div className="flex justify-center gap-4 mt-6">
+        <CarouselPrevious className="static translate-y-0 cursor-pointer hover:scale-105 border border-gray-600" />
+        <CarouselNext className="static translate-y-0 cursor-pointer hover:scale-105 border border-gray-600" />
+      </div>
     </Carousel>
   );
 }
