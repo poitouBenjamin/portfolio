@@ -19,9 +19,9 @@ export default function AboutMeSection() {
         About Me
       </h2>
       <div className="h-1 w-20 bg-linear-to-r from-gradient-start to-gradient-end rounded-full" />
-      <div className="flex md:flex-row flex-col justify-between items-start gap-2 w-full px-20 pt-20">
-        <article className="flex flex-col justify-start items-center h-full text-xl text-foreground w-full max-w-1/2 pr-10">
-          <div className="flex flex-col gap-5 w-full text-lg font-light text-muted-foreground">
+      <div className="flex xl:flex-row flex-col justify-between items-start gap-6 md:gap-2 w-full px-5 sm:px-10 md:px-20 py-20">
+        <article className="flex flex-col  xl:justify-start items-center h-full text-xl text-foreground w-full max-w-full xl:max-w-1/2 pb-10 xl:pb-0 xl:pr-10">
+          <div className="flex flex-col justify-center items-center gap-5 w-full text-lg font-light text-muted-foreground">
             <p className="">
               Hi! I'm Benjamin, a junior frontend developer with a passion for
               creating beautiful and functional web experiences. I recently
@@ -42,7 +42,7 @@ export default function AboutMeSection() {
             </p>
           </div>
         </article>
-        <article className="flex flex-col w-full max-w-1/2 justify-start items-start">
+        <article className="flex flex-col w-full max-w-full xl:max-w-1/2 justify-start items-start">
           <h3 className="font-bold text-2xl pb-7">My skills</h3>
           <SkillsCarousel />
         </article>

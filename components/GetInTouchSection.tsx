@@ -4,7 +4,7 @@ export default function GetInTouchSection() {
   return (
     <section
       id="getInTouchSection"
-      className="flex flex-col justify-center items-center  min-h-[90dvh]"
+      className="flex flex-col justify-center items-center  min-h-[90dvh] px-4"
     >
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center pb-4">
         Get In Touch
