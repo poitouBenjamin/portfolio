@@ -11,8 +11,7 @@ const skillItems = [
 
 export default function AboutMeSection() {
   return (
-    <section className="flex flex-col justify-center h-[115dvh] items-center w-full">
-      <h2 className="text-3xl md:text-4xl font-bold  text-foreground w-full text-center pb-20">
+      id="aboutSection"
         About Me
       </h2>
       <div className="flex md:flex-row flex-col justify-between items-start gap-2 w-full px-20">

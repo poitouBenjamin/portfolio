@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 
 export default function GetInTouchSection() {
   return (
-    <section className="flex flex-col justify-center items-center gap-10 min-h-[90dvh]">
+      id="getInTouchSection"
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center pb-4">
         Get In Touch
       </h2>

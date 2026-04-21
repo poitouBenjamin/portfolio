@@ -3,7 +3,7 @@ import React from "react";
 export default function HeroSection() {
   return (
     <section className="relative flex flex-col gap-3 h-[90dvh] justify-center items-center bg-background animate-fade-in">
-      <p className="text-primary text-sm font-medium tracking-wider animate-slide-up">
+      id="heroSection"
         HELLO I'M
       </p>
       <h1 className="text-5xl lg:text-8xl md:text-7xl font-bold text-forground">

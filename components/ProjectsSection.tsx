@@ -51,7 +51,7 @@ const projectItems = [
 
 export default function ProjectsSection() {
   return (
-    <section className="w-full flex flex-col justify-center items-center h-screen gap-5">
+      id="projectSection"
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center">
         My Projects
       </h2>
