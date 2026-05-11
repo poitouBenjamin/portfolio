@@ -1,9 +1,10 @@
-import React from "react";
+import { useTranslations } from "next-intl";
 
-export default function Footer() {
+export default function Footer({ locale }: { locale: string }) {
+  const t = useTranslations("Footer");
   return (
     <footer className="flex justify-center items-center h-[10dvh] border text-muted-foreground  text-center px-4">
-      2026 Benjamin Poitou. Built with Next.js & Tailwind CSS
+      {t("footer")}
     </footer>
   );
 }
