@@ -155,7 +155,7 @@ html {
       var(--gradient-end) 100%
     );
     color: white;
-    border: none;
+
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
