@@ -1,4 +1,10 @@
 {
+  "NavBar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
   "HeroSection": {
     "title": "Développeur Frontend Junior",
     "descitpion_1st_part": "Je conçois des expériences web accessibles et soignées avec des",
@@ -29,5 +35,8 @@
     "title": "Me Contacter",
     "description": "Je suis actuellement ouvert à de nouvelles opportunités et serais ravi d'échanger avec vous. Que vous ayez une question, une idée de projet, ou juste envie de dire bonjour, n'hésitez pas à me contacter !",
     "cta": "poitoubenjamin@gmail.com"
+  },
+  "Footer": {
+    "footer": "2026 Benjamin Poitou. Développé avec Next.js & Tailwind CSS"
   }
 }
