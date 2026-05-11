@@ -10,43 +10,41 @@ import {
 import amiMap from "./pictures/amiMap.png";
 import amiCover from "./pictures/amiCover.png";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-const projectItems = [
-  {
-    heroPicture: amiMap,
-    cover: amiCover,
-    title: "AMI Paris - Interactive Neighborhood Experience",
-    description:
-      "A geospatial social platform for AMI Paris, allowing users to share 'life snapshots' and discover community moments across an interactive map of Le Marais.",
-    fullDesciption:
-      "A high-end brand activation project for AMI Paris (in collaboration with Velours & Doors3). The platform enables a digital-to-physical experience where customers pin moments (photos/videos) to specific locations. Key features include a sophisticated moderation workflow, dynamic content filtering, and a custom map interface designed to foster emotional connection and local brand positioning. I specifically focused on the complex geospatial logic, ensuring seamless navigation between high-level urban clusters and precise location pins.",
-    myRole:
-      "A high-end brand activation project for AMI Paris (in collaboration with Velours & Doors3). The platform enables a digital-to-physical experience where customers pin moments (photos/videos) to specific locations. Key features include a sophisticated moderation workflow, dynamic content filtering, and a custom map interface designed to foster emotional connection and local brand positioning. I specifically focused on the complex geospatial logic, ensuring seamless navigation between high-level urban clusters and precise location pins.",
-    skills: [
-      "Next.js",
-      "Mapbox GL JS",
-      "Tailwind CSS",
-      "Shadcn/UI",
-      "Clustering Algorithms",
-    ],
-  },
-];
-
-export default function ProjectsSection() {
+export default function ProjectsSection({ locale }: { locale: string }) {
+  const t = useTranslations("ProjectSection");
+  const projectItems = [
+    {
+      heroPicture: amiMap,
+      cover: amiCover,
+      title: "AMI Paris - Interactive Neighborhood Experience",
+      description:
+        "A geospatial social platform for AMI Paris, allowing users to share 'life snapshots' and discover community moments across an interactive map of Le Marais.",
+      fullDesciption:
+        "A high-end brand activation project for AMI Paris (in collaboration with Velours & Doors3). The platform enables a digital-to-physical experience where customers pin moments (photos/videos) to specific locations. Key features include a sophisticated moderation workflow, dynamic content filtering, and a custom map interface designed to foster emotional connection and local brand positioning. I specifically focused on the complex geospatial logic, ensuring seamless navigation between high-level urban clusters and precise location pins.",
+      myRole:
+        "A high-end brand activation project for AMI Paris (in collaboration with Velours & Doors3). The platform enables a digital-to-physical experience where customers pin moments (photos/videos) to specific locations. Key features include a sophisticated moderation workflow, dynamic content filtering, and a custom map interface designed to foster emotional connection and local brand positioning. I specifically focused on the complex geospatial logic, ensuring seamless navigation between high-level urban clusters and precise location pins.",
+      skills: [
+        "Next.js",
+        "Mapbox GL JS",
+        "Tailwind CSS",
+        "Shadcn/UI",
+        "Clustering Algorithms",
+      ],
+    },
+  ];
   return (
     <section
       id="projectSection"
       className="w-full flex flex-col justify-center items-center min-h-screen gap-5 px-5"
     >
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center">
-        My Projects
+        {t("title")}
       </h2>
       <div className="h-1 w-20 bg-linear-to-r from-gradient-start to-gradient-end rounded-full" />
       <div className=" flex flex-col items-center justify-center text-muted-foreground text-lg gap-9 ">
-        <p className="text-center w-full max-w-150">
-          Here are some of my recent projects that showcase my skills and
-          passion for frontend development.
-        </p>
+        <p className="text-center w-full max-w-150">{t("subtitle")}</p>
 
         <ul className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full pt-10">
           {projectItems.map((projectItem, idx) => {
@@ -93,7 +91,7 @@ export default function ProjectsSection() {
                       </h2>
                       <div className="flex flex-col gap-2 w-full">
                         <h3 className="text-muted-foreground font-bold">
-                          ABOUT THIS PROJECT
+                          {t("dialog.about")}
                         </h3>
                         <p className="text-card-foreground">
                           {projectItem.fullDesciption}
@@ -101,7 +99,7 @@ export default function ProjectsSection() {
                       </div>
                       <div className="flex flex-col gap-2 w-full">
                         <h3 className="text-muted-foreground font-bold">
-                          MY ROLE
+                          {t("dialog.role")}
                         </h3>
                         <p className="text-card-foreground">
                           {projectItem.myRole}
@@ -109,7 +107,7 @@ export default function ProjectsSection() {
                       </div>
                       <div className="flex flex-col gap-2 pb-3 w-full">
                         <h3 className="text-muted-foreground font-bold">
-                          TECHNOLOGIES USED
+                          {t("dialog.technologies")}
                         </h3>
                         <ul className="flex flex-wrap justify-start items-center gap-3 w-full">
                           {projectItem.skills.map((skill, idx) => (
@@ -126,7 +124,7 @@ export default function ProjectsSection() {
                         href="https://family.amiparis.com/fr/marais"
                         className="flex justify-center gap-5 items-center w-full border h-10 rounded-md cursor-pointer hover:scale-105 bg-primary"
                       >
-                        <span>Visit Live Site</span>
+                        <span>{t("dialog.cta")}</span>
                         <ExternalLink size={17} />
                       </a>
                     </div>
