@@ -1,21 +1,45 @@
 "use client";
-
+import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-const navItems = [
-  { title: "Home", href: "#heroSection" },
-  { title: "About", href: "#aboutSection" },
-  { title: "Projects", href: "#projectSection" },
-  { title: "Contact", href: "#getInTouchSection" },
-];
-
-export default function NavBar() {
+export default function NavBar({ locale }: { locale: string }) {
   const [isMenuExpended, setIsMenuExpended] = useState<boolean>(false);
+  const [currentLang, setCurrentLang] = useState<string>(locale);
+  const t = useTranslations("NavBar");
+  const router = useRouter();
+
+  const navItems = [
+    { title: t("home"), href: "#heroSection" },
+    { title: t("about"), href: "#aboutSection" },
+    { title: t("projects"), href: "#projectSection" },
+    { title: t("contact"), href: "#getInTouchSection" },
+  ];
+
+  function handleLang(lang: string) {
+    const nextLang = lang === "fr" ? "en" : "fr";
+    setCurrentLang(nextLang);
+    router.replace(`/${nextLang}`);
+  }
 
   return (
-    // On enlève "hidden" ici pour que le conteneur existe sur mobile
-    <header className="fixed top-0 right-0 z-50 w-full flex justify-end items-center px-10 h-[10dvh] bg-background">
+    <header className="fixed top-0 right-0 z-50 w-full flex justify-between items-center px-10 h-[10dvh] bg-background">
+      <div className="btn-gradient flex items-center rounded-md ">
+        <button
+          className={`w-8 text-center ${currentLang === "fr" ? "" : "bg-background"} cursor-pointer`}
+          onClick={() => handleLang(locale)}
+        >
+          fr
+        </button>
+        <button
+          className={`w-8 text-center ${currentLang === "fr" ? "bg-background" : ""} cursor-pointer`}
+          onClick={() => handleLang(locale)}
+        >
+          en
+        </button>
+      </div>
+
       <ul className="hidden md:flex gap-10">
         {navItems.map((navItem, idx) => (
           <li
