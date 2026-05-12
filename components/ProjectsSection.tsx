@@ -34,7 +34,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projectSection"
-      className="w-full flex flex-col justify-center items-center   px-5"
+      className="w-full flex flex-col justify-center min-h-dvh items-center "
     >
       <h2 className="text-3xl md:text-4xl font-bold  text-foreground w-full text-center pb-4">
         {t("title")}
