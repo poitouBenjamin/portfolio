@@ -13,7 +13,7 @@ type Props = {
 export default async function Home({ params }: Props) {
   const { locale } = await params;
   return (
-    <main className="relative pt-[10dvh]">
+    <main className="flex flex-col gap-y-50 relative pt-[10dvh]">
       <NavBar locale={locale} />
       <HeroSection />
       <AboutMeSection />

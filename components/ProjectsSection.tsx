@@ -34,16 +34,16 @@ export default function ProjectsSection() {
   return (
     <section
       id="projectSection"
-      className="w-full flex flex-col justify-center items-center min-h-screen gap-5 px-5"
+      className="w-full flex flex-col justify-center items-center   px-5"
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center">
+      <h2 className="text-3xl md:text-4xl font-bold  text-foreground w-full text-center pb-4">
         {t("title")}
       </h2>
       <div className="h-1 w-20 bg-linear-to-r from-gradient-start to-gradient-end rounded-full" />
-      <div className=" flex flex-col items-center justify-center text-muted-foreground text-lg gap-9 ">
+      <div className=" flex flex-col items-center justify-center text-muted-foreground text-lg gap-9 pt-10 ">
         <p className="text-center w-full max-w-150">{t("subtitle")}</p>
 
-        <ul className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full pt-10">
+        <ul className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full pt-5">
           {projectItems.map((projectItem, idx) => {
             return (
               <li key={idx} className="flex justify-center items-center w-full">
