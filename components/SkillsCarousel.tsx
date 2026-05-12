@@ -14,59 +14,192 @@ export default function SkillsCarousel() {
     {
       blockTitle: t("blocCarouselTitle.0"),
       skills: [
-        { logoUrl: "/logos/htmlLogo.png", name: "HTML5" },
-        { logoUrl: "/logos/cssLogo.png", name: "CSS3" },
-        { logoUrl: "/logos/jsLogo.png", name: "JavaScript ES6+" },
-        { logoUrl: "/logos/tsLogo.png", name: "Typescript" },
-        { logoUrl: "/logos/javaLogo.png", name: "Java" },
-        { logoUrl: "/logos/cLogo.png", name: "C" },
-        { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+          name: "HTML5",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+          name: "CSS3",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg",
+          name: "JavaScript ES6+",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+          name: "Typescript",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+          name: "Java",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-line.svg",
+          name: "C",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg",
+          name: "Matlab",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+          name: "SQL",
+          invert: false,
+        },
       ],
     },
     {
       blockTitle: t("blocCarouselTitle.1"),
       skills: [
-        { logoUrl: "/logos/nodeLogo.png", name: "Node.js" },
-        { logoUrl: "/logos/reactLogo.svg", name: "React" },
-        { logoUrl: "/logos/nextLogo.png", name: "Next.js" },
-        { logoUrl: "/logos/springLogo.png", name: "Spring" },
-        { logoUrl: "/logos/javaLogo.png", name: "Java" },
-        { logoUrl: "/logos/tailwindLogo.png", name: "Tailwind" },
-        { logoUrl: "/logos/shadcnLogo.svg", name: "Shadcn/ui" },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-line.svg",
+          name: "Node.js",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+          name: "React",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+          name: "Next.js",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+          name: "Spring",
+          invert: false,
+        },
+
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+          name: "Tailwind",
+          invert: false,
+        },
+        { logoUrl: "/logos/shadcnui.svg", name: "Shadcn/ui", invert: true },
       ],
     },
     {
       blockTitle: t("blocCarouselTitle.2"),
       skills: [
-        { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+          name: "MySQL",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+          name: "PostgreSQL",
+          invert: false,
+        },
         { logoUrl: "/logos/jdbcLogo.svg", name: "JDBC" },
-        { logoUrl: "/logos/jpaLogo.png", name: "Hibernate" },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-original.svg",
+          name: "Hibernate",
+          invert: false,
+        },
       ],
     },
     {
       blockTitle: t("blocCarouselTitle.3"),
       skills: [
-        { logoUrl: "/logos/vscodeLogo.png", name: "Vs Code" },
-        { logoUrl: "/logos/ijLogo.png", name: "IntelliJ IDEA" },
-        { logoUrl: "/logos/gitLogo.png", name: "Git" },
-        { logoUrl: "/logos/vmLogo.png", name: "VM Deployment" },
-        { logoUrl: "/logos/figmaLogo.png", name: "Figma" },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+          name: "Vs Code",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg",
+          name: "IntelliJ IDEA",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+          name: "Git",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+          name: "Vercel",
+          invert: true,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg",
+          name: "GCP",
+          invert: false,
+        },
       ],
     },
     {
       blockTitle: t("blocCarouselTitle.4"),
       skills: [
-        { logoUrl: "/logos/copilotLogo.svg", name: "github Copilot" },
-        { logoUrl: "/logos/cursorLogo.png", name: "Cursor" },
+        {
+          logoUrl: "/logos/githubcopilot.svg",
+          name: "github Copilot",
+          invert: true,
+        },
+        { logoUrl: "/logos/cursor.svg", name: "Cursor", invert: true },
         { logoUrl: "/logos/claudeLogo.svg", name: "Claude Code" },
       ],
     },
     {
       blockTitle: t("blocCarouselTitle.5"),
       skills: [
-        { logoUrl: "/logos/umlLogo.png", name: "UML" },
-        { logoUrl: "/logos/prismicLogo.svg", name: "Prismic" },
-        { logoUrl: "/logos/sanityLogo.png", name: "Sanity" },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unifiedmodelinglanguage/unifiedmodelinglanguage-original.svg",
+          name: "UML",
+          invert: false,
+        },
+        { logoUrl: "/logos/prismicLogo.svg", name: "Prismic", invert: false },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sanity/sanity-original.svg",
+          name: "Sanity",
+          invert: false,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
+          name: "WordPress",
+          invert: true,
+        },
+        {
+          logoUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+          name: "Figma",
+          invert: false,
+        },
       ],
     },
   ];
@@ -92,6 +225,7 @@ export default function SkillsCarousel() {
                       <SkillCard
                         logoUrl={skill.logoUrl}
                         skillName={skill.name}
+                        invert={skill?.invert || false}
                       />
                     </li>
                   );
