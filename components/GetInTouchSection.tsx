@@ -1,15 +1,15 @@
 import { Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-export default function GetInTouchSection({ locale }: { locale: string }) {
+export default function GetInTouchSection() {
   const t = useTranslations("GetInTouchSection");
 
   return (
     <section
       id="getInTouchSection"
-      className="flex flex-col justify-center items-center  min-h-[90dvh] px-4"
+      className="flex flex-col justify-center items-center min-h-[70dvh]  px-4"
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full text-center pb-4">
+      <h2 className="text-3xl md:text-4xl font-bold  text-foreground w-full text-center pb-4">
         {t("title")}
       </h2>
 

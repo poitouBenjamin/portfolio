@@ -1,7 +1,7 @@
 import { MoveDown, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-export default function HeroSection({ locale }: { locale: string }) {
+export default function HeroSection() {
   const t = useTranslations("HeroSection");
   return (
     <section

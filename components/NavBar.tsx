@@ -24,7 +24,7 @@ export default function NavBar({ locale }: { locale: string }) {
   }
 
   return (
-    <header className="fixed top-0 right-0 z-50 w-full flex justify-between items-center px-10 h-[10dvh] bg-background">
+    <header className="fixed top-0 right-0 z-50 w-full flex justify-between items-center px-10 min-h-[10dvh] bg-background">
       <div className="btn-gradient flex items-center rounded-md ">
         <button
           className={`w-8 text-center ${currentLang === "fr" ? "" : "bg-background"} cursor-pointer`}
@@ -60,7 +60,7 @@ export default function NavBar({ locale }: { locale: string }) {
         </button>
 
         {isMenuExpended && (
-          <nav className="fixed inset-0 bg-background flex flex-col items-start justify-center h-[35dvh] z-40 border border-gray-800">
+          <nav className="fixed inset-0 bg-background flex flex-col items-start justify-start h-fit z-40 border border-gray-800 pb-5">
             <button
               onClick={() => setIsMenuExpended(false)}
               className="absolute top-5 right-10"
