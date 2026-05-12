@@ -6,69 +6,70 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import SkillCard from "./SkillCard";
-
-const skillItems = [
-  {
-    blockTitle: "Languages",
-    skills: [
-      { logoUrl: "/logos/htmlLogo.png", name: "HTML5" },
-      { logoUrl: "/logos/cssLogo.png", name: "CSS3" },
-      { logoUrl: "/logos/jsLogo.png", name: "JavaScript ES6+" },
-      { logoUrl: "/logos/tsLogo.png", name: "Typescript" },
-      { logoUrl: "/logos/javaLogo.png", name: "Java" },
-      { logoUrl: "/logos/cLogo.png", name: "C" },
-      { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
-    ],
-  },
-  {
-    blockTitle: "Frameworks & Libraries",
-    skills: [
-      { logoUrl: "/logos/nodeLogo.png", name: "Node.js" },
-      { logoUrl: "/logos/reactLogo.svg", name: "React" },
-      { logoUrl: "/logos/nextLogo.png", name: "Next.js" },
-      { logoUrl: "/logos/springLogo.png", name: "Spring" },
-      { logoUrl: "/logos/javaLogo.png", name: "Java" },
-      { logoUrl: "/logos/tailwindLogo.png", name: "Tailwind" },
-      { logoUrl: "/logos/shadcnLogo.svg", name: "Shadcn/ui" },
-    ],
-  },
-  {
-    blockTitle: "Database & ORM",
-    skills: [
-      { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
-      { logoUrl: "/logos/jdbcLogo.svg", name: "JDBC" },
-      { logoUrl: "/logos/jpaLogo.png", name: "Hibernate" },
-    ],
-  },
-  {
-    blockTitle: "Tools & DevOps",
-    skills: [
-      { logoUrl: "/logos/vscodeLogo.png", name: "Vs Code" },
-      { logoUrl: "/logos/ijLogo.png", name: "IntelliJ IDEA" },
-      { logoUrl: "/logos/gitLogo.png", name: "Git" },
-      { logoUrl: "/logos/vmLogo.png", name: "VM Deployment" },
-      { logoUrl: "/logos/figmaLogo.png", name: "Figma" },
-    ],
-  },
-  {
-    blockTitle: "AI Assistants",
-    skills: [
-      { logoUrl: "/logos/copilotLogo.svg", name: "github Copilot" },
-      { logoUrl: "/logos/cursorLogo.png", name: "Cursor" },
-      { logoUrl: "/logos/claudeLogo.svg", name: "Claude Code" },
-    ],
-  },
-  {
-    blockTitle: "CMS & Design",
-    skills: [
-      { logoUrl: "/logos/umlLogo.png", name: "UML" },
-      { logoUrl: "/logos/prismicLogo.svg", name: "Prismic" },
-      { logoUrl: "/logos/sanityLogo.png", name: "Sanity" },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function SkillsCarousel() {
+  const t = useTranslations("AboutMeSection");
+  const skillItems = [
+    {
+      blockTitle: t("blocCarouselTitle.0"),
+      skills: [
+        { logoUrl: "/logos/htmlLogo.png", name: "HTML5" },
+        { logoUrl: "/logos/cssLogo.png", name: "CSS3" },
+        { logoUrl: "/logos/jsLogo.png", name: "JavaScript ES6+" },
+        { logoUrl: "/logos/tsLogo.png", name: "Typescript" },
+        { logoUrl: "/logos/javaLogo.png", name: "Java" },
+        { logoUrl: "/logos/cLogo.png", name: "C" },
+        { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
+      ],
+    },
+    {
+      blockTitle: t("blocCarouselTitle.1"),
+      skills: [
+        { logoUrl: "/logos/nodeLogo.png", name: "Node.js" },
+        { logoUrl: "/logos/reactLogo.svg", name: "React" },
+        { logoUrl: "/logos/nextLogo.png", name: "Next.js" },
+        { logoUrl: "/logos/springLogo.png", name: "Spring" },
+        { logoUrl: "/logos/javaLogo.png", name: "Java" },
+        { logoUrl: "/logos/tailwindLogo.png", name: "Tailwind" },
+        { logoUrl: "/logos/shadcnLogo.svg", name: "Shadcn/ui" },
+      ],
+    },
+    {
+      blockTitle: t("blocCarouselTitle.2"),
+      skills: [
+        { logoUrl: "/logos/sqlLogo.png", name: "SQL" },
+        { logoUrl: "/logos/jdbcLogo.svg", name: "JDBC" },
+        { logoUrl: "/logos/jpaLogo.png", name: "Hibernate" },
+      ],
+    },
+    {
+      blockTitle: t("blocCarouselTitle.3"),
+      skills: [
+        { logoUrl: "/logos/vscodeLogo.png", name: "Vs Code" },
+        { logoUrl: "/logos/ijLogo.png", name: "IntelliJ IDEA" },
+        { logoUrl: "/logos/gitLogo.png", name: "Git" },
+        { logoUrl: "/logos/vmLogo.png", name: "VM Deployment" },
+        { logoUrl: "/logos/figmaLogo.png", name: "Figma" },
+      ],
+    },
+    {
+      blockTitle: t("blocCarouselTitle.4"),
+      skills: [
+        { logoUrl: "/logos/copilotLogo.svg", name: "github Copilot" },
+        { logoUrl: "/logos/cursorLogo.png", name: "Cursor" },
+        { logoUrl: "/logos/claudeLogo.svg", name: "Claude Code" },
+      ],
+    },
+    {
+      blockTitle: t("blocCarouselTitle.5"),
+      skills: [
+        { logoUrl: "/logos/umlLogo.png", name: "UML" },
+        { logoUrl: "/logos/prismicLogo.svg", name: "Prismic" },
+        { logoUrl: "/logos/sanityLogo.png", name: "Sanity" },
+      ],
+    },
+  ];
   return (
     <Carousel className="w-full" opts={{ loop: true }}>
       <CarouselContent>

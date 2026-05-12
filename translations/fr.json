@@ -17,7 +17,15 @@
     "title": "À propos",
     "description_1st_part": "Bonjour ! Je suis Benjamin, développeur frontend junior passionné par la création d'interfaces web belles et fonctionnelles. Récemment diplômé en informatique, je me concentre sur les technologies web modernes.",
     "description_2nd_part": "Quand je ne code pas, j'explore les nouvelles tendances du design, je contribue à des projets open-source ou je me tiens informé des dernières évolutions du développement web. Je crois au code propre, maintenable, et aux interfaces que les utilisateurs apprécient.",
-    "description_3rd_part": "Je suis actuellement à la recherche d'opportunités pour grandir en tant que développeur et contribuer à des projets qui ont du sens. Construisons quelque chose ensemble !"
+    "description_3rd_part": "Je suis actuellement à la recherche d'opportunités pour grandir en tant que développeur et contribuer à des projets qui ont du sens. Construisons quelque chose ensemble !",
+    "blocCarouselTitle": [
+      "Languages",
+      "Frameworks & Librairies",
+      "Base de Données & ORM",
+      "Outils & Devops",
+      "Assistants IA",
+      "CMS & Conception"
+    ]
   },
 
   "ProjectSection": {
@@ -28,7 +36,15 @@
       "role": "MON RÔLE",
       "technologies": "TECHNOLOGIES UTILISÉES",
       "cta": "Voir le site"
-    }
+    },
+    "projects": [
+      {
+        "title": "AMI Paris - Expérience Interactive de Quartier",
+        "description": "Une plateforme sociale géospatiale pour AMI Paris, permettant aux utilisateurs de partager des 'instantanés de vie' et de découvrir des moments de communauté sur une carte interactive du Marais.",
+        "fullDesciption": "Un projet d'activation de marque haut de gamme pour AMI Paris (en collaboration avec Velours & Doors3). La plateforme propose une expérience phygitale où les clients épinglent des moments (photos/vidéos) à des lieux précis. Les fonctionnalités clés incluent un workflow de modération élaboré, un filtrage dynamique du contenu et une interface cartographique sur mesure conçue pour favoriser le lien émotionnel et le positionnement local de la marque. Je me suis concentré en particulier sur la logique géospatiale complexe, en assurant une navigation fluide entre les clusters urbains de haut niveau et les épingles de localisation précises.",
+        "myRole": "Un projet d'activation de marque haut de gamme pour AMI Paris (en collaboration avec Velours & Doors3). La plateforme propose une expérience phygitale où les clients épinglent des moments (photos/vidéos) à des lieux précis. Les fonctionnalités clés incluent un workflow de modération élaboré, un filtrage dynamique du contenu et une interface cartographique sur mesure conçue pour favoriser le lien émotionnel et le positionnement local de la marque. Je me suis concentré en particulier sur la logique géospatiale complexe, en assurant une navigation fluide entre les clusters urbains de haut niveau et les épingles de localisation précises."
+      }
+    ]
   },
 
   "GetInTouchSection": {
