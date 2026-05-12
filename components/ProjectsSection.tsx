@@ -18,13 +18,10 @@ export default function ProjectsSection({ locale }: { locale: string }) {
     {
       heroPicture: amiMap,
       cover: amiCover,
-      title: "AMI Paris - Interactive Neighborhood Experience",
-      description:
-        "A geospatial social platform for AMI Paris, allowing users to share 'life snapshots' and discover community moments across an interactive map of Le Marais.",
-      fullDesciption:
-        "A high-end brand activation project for AMI Paris (in collaboration with Velours & Doors3). The platform enables a digital-to-physical experience where customers pin moments (photos/videos) to specific locations. Key features include a sophisticated moderation workflow, dynamic content filtering, and a custom map interface designed to foster emotional connection and local brand positioning. I specifically focused on the complex geospatial logic, ensuring seamless navigation between high-level urban clusters and precise location pins.",
-      myRole:
-        "A high-end brand activation project for AMI Paris (in collaboration with Velours & Doors3). The platform enables a digital-to-physical experience where customers pin moments (photos/videos) to specific locations. Key features include a sophisticated moderation workflow, dynamic content filtering, and a custom map interface designed to foster emotional connection and local brand positioning. I specifically focused on the complex geospatial logic, ensuring seamless navigation between high-level urban clusters and precise location pins.",
+      title: t("projects.0.title"),
+      description: t("projects.0.description"),
+      fullDesciption: t("projects.0.fullDesciption"),
+      myRole: t("projects.0.myRole"),
       skills: [
         "Next.js",
         "Mapbox GL JS",
