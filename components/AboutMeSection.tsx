@@ -1,7 +1,7 @@
 import SkillsCarousel from "./SkillsCarousel";
 import { useTranslations } from "next-intl";
 
-export default function AboutMeSection({ locale }: { locale: string }) {
+export default function AboutMeSection() {
   const t = useTranslations("AboutMeSection");
   return (
     <section

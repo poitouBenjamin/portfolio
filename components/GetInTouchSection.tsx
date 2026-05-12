@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-export default function GetInTouchSection({ locale }: { locale: string }) {
+export default function GetInTouchSection() {
   const t = useTranslations("GetInTouchSection");
 
   return (

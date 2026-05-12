@@ -12,7 +12,7 @@ import amiCover from "./pictures/amiCover.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-export default function ProjectsSection({ locale }: { locale: string }) {
+export default function ProjectsSection() {
   const t = useTranslations("ProjectSection");
   const projectItems = [
     {

@@ -15,11 +15,11 @@ export default async function Home({ params }: Props) {
   return (
     <main className="relative pt-[10dvh]">
       <NavBar locale={locale} />
-      <HeroSection locale={locale} />
-      <AboutMeSection locale={locale} />
-      <ProjectsSection locale={locale} />
-      <GetInTouchSection locale={locale} />
-      <Footer locale={locale} />
+      <HeroSection />
+      <AboutMeSection />
+      <ProjectsSection />
+      <GetInTouchSection />
+      <Footer />
     </main>
   );
 }
