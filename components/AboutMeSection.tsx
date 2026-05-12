@@ -1,15 +1,6 @@
 import SkillsCarousel from "./SkillsCarousel";
 import { useTranslations } from "next-intl";
 
-const skillItems = [
-  { logoUrl: "/logos/htmlLogo.png", name: "HTML" },
-  { logoUrl: "/logos/cssLogo.png", name: "CSS" },
-  { logoUrl: "/logos/jsLogo.png", name: "JavaScript" },
-  { logoUrl: "/logos/reactLogo.svg", name: "React" },
-  { logoUrl: "/logos/tailwindLogo.png", name: "Tailwind" },
-  { logoUrl: "/logos/gitLogo.png", name: "Git" },
-];
-
 export default function AboutMeSection({ locale }: { locale: string }) {
   const t = useTranslations("AboutMeSection");
   return (
